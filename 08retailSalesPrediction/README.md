@@ -7,7 +7,7 @@ This project analyzes how discounts affect retail sales and profit. While discou
 Retail companies frequently rely on discounts to drive sales, but excessive discounting can reduce profitability. This project explores how pricing strategies impact both revenue and profit.
 
 ## Data
-The dataset used is the [Superstore dataset] (https://www.kaggle.com/datasets/vivek468/superstore-dataset-final) from Kaggle. It includes:
+The dataset used is the [Superstore dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final) from Kaggle. It includes:
 - Sales.
 - Profit.
 - Discount.
