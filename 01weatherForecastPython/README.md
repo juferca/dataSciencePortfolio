@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project analyzes weather data from the OpenWeatherMap API using Python. The program allows users to search for weather information in U.S. cities either by city name or zip code. The goal of the project is to demonstrate how APIs, user input validation, error handling, and data processing can be combined into a practical real-world application.
+This project analyzes weather data from the [OpenWeatherMap API](http://openweathermap.org/api) using Python. The program allows users to search for weather information in U.S. cities either by city name or zip code. The goal of the project is to demonstrate how APIs, user input validation, error handling, and data processing can be combined into a practical real-world application.
 
 ##Business Problem
 
