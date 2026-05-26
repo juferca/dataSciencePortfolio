@@ -1,20 +1,8 @@
-# DSC 510
-# Week 12 - Final Project
-# Programming Assignment Week 12
-
-# This programs allows user to lookup weather forecast data for cities in the U.S. from http://openweathermap.org/ by
-# entering city name or zip code.
-# If user selects city and there is more than one city with the same name, program only returns five city names.
-# User then can select city from returned data.
-# User can select temperatures scales to be displayed as Celsius, Fahrenheit or Kelvin.
-
-# Author Juan Caballero
-# 6/1/2024
-
 import requests
 from pprint import pprint
 
-api_key = 'bcfe771f2b17da3ed6e9d004989e025e'
+# Replace with your own OpenWeatherMap API key
+api_key = 'your_api_key_here'
 
 
 # Function to make an API request and handle potential errors.
