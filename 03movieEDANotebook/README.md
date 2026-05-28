@@ -1,8 +1,8 @@
-\# Movie Ratings Analysis
+# Movie Ratings Analysis
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -14,7 +14,7 @@ The project was completed using Python, Jupyter Notebook, statistical analysis, 
 
 
 
-\## Business Problem
+## Business Problem
 
 
 
@@ -26,7 +26,7 @@ This project explores the relationship between critic scores and audience scores
 
 
 
-\## Data
+## Data
 
 
 
@@ -38,29 +38,29 @@ Dataset includes:
 
 
 
-\* Movie titles
+* Movie titles.
 
-\* Genres
+* Genres.
 
-\* Directors
+* Directors.
 
-\* Actors
+* Actors.
 
-\* Content ratings
+* Content ratings.
 
-\* Release dates
+* Release dates.
 
-\* Runtime
+* Runtime.
 
-\* Production companies
+* Production companies.
 
-\* Critic scores (Tomatometer)
+* Critic scores (Tomatometer).
 
-\* Audience scores
+* Audience scores.
 
-\* Critic review counts
+* Critic review counts.
 
-\* Audience review counts
+* Audience review counts.
 
 
 
@@ -72,7 +72,7 @@ https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-criti
 
 
 
-\## Data Preparation
+## Data Preparation
 
 
 
@@ -80,17 +80,17 @@ Several cleaning and preparation steps were performed before analysis:
 
 
 
-\* Removed rows with missing values
+* Removed rows with missing values.
 
-\* Converted release dates into datetime format
+* Converted release dates into datetime format.
 
-\* Extracted release year from release dates
+* Extracted release year from release dates.
 
-\* Selected variables relevant to the analysis
+* Selected variables relevant to the analysis.
 
-\* Encoded categorical variables for regression analysis
+* Encoded categorical variables for regression analysis.
 
-\* Removed incomplete records to improve statistical reliability
+* Removed incomplete records to improve statistical reliability.
 
 
 
@@ -98,19 +98,19 @@ Selected variables included:
 
 
 
-\* `tomatometer\_rating`
+* `tomatometer\_rating`
 
-\* `audience\_rating`
+* `audience\_rating`
 
-\* `content\_rating`
+* `content\_rating`
 
-\* `runtime`
+* `runtime`
 
-\* `release\_year`
+* `release\_year`
 
 
 
-\## Methods
+## Methods
 
 
 
@@ -118,21 +118,21 @@ The project uses several statistical and exploratory analysis techniques, includ
 
 
 
-\* Exploratory Data Analysis (EDA)
+* Exploratory Data Analysis (EDA).
 
-\* Histograms and distribution analysis
+* Histograms and distribution analysis.
 
-\* PMF (Probability Mass Function)
+* PMF (Probability Mass Function).
 
-\* CDF (Cumulative Distribution Function)
+* CDF (Cumulative Distribution Function).
 
-\* Scatter plots
+* Scatter plots.
 
-\* Correlation analysis
+* Correlation analysis.
 
-\* Hypothesis testing using t-tests
+* Hypothesis testing using t-tests.
 
-\* Multiple linear regression
+* Multiple linear regression.
 
 
 
@@ -140,23 +140,23 @@ Python libraries used include:
 
 
 
-\* pandas
+* pandas.
 
-\* numpy
+* numpy.
 
-\* matplotlib
+* matplotlib.
 
-\* seaborn
+* seaborn.
 
-\* scipy
+* scipy.
 
-\* statsmodels
+* statsmodels.
 
-\* scikit-learn
+* scikit-learn.
 
 
 
-\## Visualizations
+## Visualizations
 
 
 
@@ -164,17 +164,17 @@ The project includes several visualizations to analyze rating behavior and movie
 
 
 
-\* Histograms
+* Histograms.
 
-\* Scatter plots
+* Scatter plots.
 
-\* PMF comparisons
+* PMF comparisons.
 
-\* CDF plots
+* CDF plots.
 
-\* Normal distribution fitting
+* Normal distribution fitting.
 
-\* Correlation visualizations
+* Correlation visualizations.
 
 
 
@@ -182,7 +182,7 @@ The visualizations help identify trends, outliers, and relationships between var
 
 
 
-\## Results
+## Results
 
 
 
@@ -190,17 +190,17 @@ Several important findings were identified during the analysis:
 
 
 
-\* Audience ratings and critic ratings show a moderate positive correlation.
+* Audience ratings and critic ratings show a moderate positive correlation.
 
-\* Runtime has a very weak relationship with critic ratings.
+* Runtime has a very weak relationship with critic ratings.
 
-\* Critics and audiences generally rate movies similarly on average.
+* Critics and audiences generally rate movies similarly on average.
 
-\* Audience ratings tend to be slightly more stable than critic ratings.
+* Audience ratings tend to be slightly more stable than critic ratings.
 
-\* Some content ratings appear more frequently than others, with R-rated movies dominating the dataset.
+* Some content ratings appear more frequently than others, with R-rated movies dominating the dataset.
 
-\* Multiple linear regression showed that audience rating, runtime, and content rating all contributed significantly to predicting critic scores.
+* Multiple linear regression showed that audience rating, runtime, and content rating all contributed significantly to predicting critic scores.
 
 
 
@@ -208,7 +208,7 @@ Regression analysis achieved an R-squared value of approximately 0.46, meaning t
 
 
 
-\## Key Insights Learned
+## Key Insights Learned
 
 
 
@@ -216,25 +216,25 @@ This project strengthened understanding of:
 
 
 
-\* Data cleaning and preprocessing
+* Data cleaning and preprocessing.
 
-\* Statistical distributions
+* Statistical distributions.
 
-\* Correlation vs causation
+* Correlation vs causation.
 
-\* Hypothesis testing
+* Hypothesis testing.
 
-\* Regression modeling
+* Regression modeling.
 
-\* Data visualization
+* Data visualization.
 
-\* Exploratory data analysis
+* Exploratory data analysis.
 
-\* Working with real-world movie datasets
+* Working with real-world movie datasets.
 
 
 
-\## Challenges
+## Challenges
 
 
 
@@ -242,21 +242,21 @@ Some challenges encountered during development included:
 
 
 
-\* Handling missing values
+* Handling missing values.
 
-\* Working with categorical variables
+* Working with categorical variables.
 
-\* Interpreting statistical distributions
+* Interpreting statistical distributions.
 
-\* Managing multicollinearity in regression analysis
+* Managing multicollinearity in regression analysis.
 
-\* Identifying meaningful relationships between movie variables
+* Identifying meaningful relationships between movie variables.
 
-\* Understanding non-linear relationships in the data
+* Understanding non-linear relationships in the data.
 
 
 
-\## Limitations
+## Limitations
 
 
 
@@ -264,19 +264,19 @@ The project has several limitations:
 
 
 
-\* The dataset only includes movies available in the Rotten Tomatoes dataset.
+* The dataset only includes movies available in the Rotten Tomatoes dataset.
 
-\* Financial information such as budgets and box office revenue was not included.
+* Financial information such as budgets and box office revenue was not included.
 
-\* Genre information was difficult to analyze because movies can belong to multiple genres.
+* Genre information was difficult to analyze because movies can belong to multiple genres.
 
-\* Ratings may contain personal bias from both critics and audiences.
+* Ratings may contain personal bias from both critics and audiences.
 
-\* The regression model assumes mostly linear relationships between variables.
+* The regression model assumes mostly linear relationships between variables.
 
 
 
-\## Future Work
+## Future Work
 
 
 
@@ -284,23 +284,23 @@ Possible future improvements include:
 
 
 
-\* Adding box office and budget data
+* Adding box office and budget data.
 
-\* Building machine learning prediction models
+* Building machine learning prediction models.
 
-\* Predicting rating discrepancies between critics and audiences
+* Predicting rating discrepancies between critics and audiences.
 
-\* Creating interactive dashboards
+* Creating interactive dashboards.
 
-\* Performing genre-specific analysis
+* Performing genre-specific analysis.
 
-\* Analyzing streaming-era movies separately
+* Analyzing streaming-era movies separately.
 
-\* Exploring non-linear regression techniques
+* Exploring non-linear regression techniques.
 
 
 
-\## Conclusion
+## Conclusion
 
 
 
@@ -316,15 +316,15 @@ Overall, the project strengthened practical experience with Python programming, 
 
 
 
-\## Files Included
+## Files Included
 
 
 
-\* `movieRatingsAnalysis.ipynb` — Jupyter Notebook containing the full analysis
+* `movieRatingsAnalysis.ipynb` — Jupyter Notebook containing the full analysis.
 
-\* `movieRatingsAnalysis.pdf` — Exported PDF version of the notebook
+* `movieRatingsAnalysis.pdf` — Exported PDF version of the notebook.
 
-\* `README.md` — Project overview and documentation
+* `README.md` — Project overview and documentation.
 
 
 
