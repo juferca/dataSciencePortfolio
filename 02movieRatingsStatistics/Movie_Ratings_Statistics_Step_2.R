@@ -1,20 +1,10 @@
-# Assignment: Final Project Step 2
-# Name: Caballero, Juan
-# Date: 2024-08-05
-
-
 # Dataset obtained from: https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset
-
-
-# Set working directory.
-setwd("C:/Users/Juan Caballero/Desktop/dataSciencePortfolio/02movieRatingsStatistics")
 
 # Load libraries needed.
 library(readxl)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
-
 
 # IMPORTING DATA.
 # I have two file formats, .csv and .xlsx. Importing .xlsx (slower to read) to main original data types.
