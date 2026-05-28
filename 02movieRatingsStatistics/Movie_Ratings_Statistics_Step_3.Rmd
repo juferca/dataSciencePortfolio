@@ -1,0 +1,52 @@
+---
+title: "Movie_Ratings_Statistics_Step_3"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction.
+In movie reviews, the gap between critics and audience ratings has long been a subject of debate. This project aims to examine the factors contributing to the disparities between these two types of reviews using data from Rotten Tomatoes. The overarching goal is to understand these differences better and potentially offer insights for filmmakers and marketers to cater more effectively to both audiences and critics.
+
+# Problem Statement.
+The primary problem addressed in this project is the consistent discrepancy between critic and audience scores on Rotten Tomatoes. Specifically, the analysis aims to answer the following research questions:
+
+1. What are the key factors that influence critic scores compared to audience scores? 
+2. How do genre and release year affect the discrepancy between critic and audience scores? 
+3. Are there specific directors or actors whose movies consistently show a larger gap between critic and audience scores? 
+4. How do blockbuster movies compare to indie films regarding critic vs. audience reviews? 
+5. What roles do movie budgets and box office performance play in comparing critic and audience scores?
+
+# How the Problem Was Addressed.
+The project employed statistical analysis methods to investigate the factors contributing to the discrepancies between critic and audience scores. The data was sourced from the Rotten Tomatoes Movies and Critic Reviews Dataset (https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset), which includes detailed information on movie titles, movie information, critics consensus, content ratings, genres, directors, authors, actors, original release date, streaming release date, run time, production company, tomatometer status, tomatometer rating, tomatometer count, audience status, audience rating, audience count, tomatometer top critics count, tomatometer fresh critics count, and tomatometer rotten critics count.
+
+# Data Preparation and Methodology.
+
+- **Data Cleaning:** The initial data contained missing values in key variables such as tomatometer_rating, audience_rating, and original_release_date. These missing values were addressed by dropping rows where essential data points were missing.
+- **Variable Selection:** The relevant columns selected for analysis included movie_title, content_rating, genres, directors, actors, original_release_date, runtime, production_company, tomatometer_rating, audience_rating, and release_year.
+- **Feature Engineering:** A new variable, score_discrepancy, was created to quantify the difference between critic and audience scores. This variable became the focal point for analyzing the factors contributing to rating discrepancies.
+
+# Analysis.
+The analysis provided several key insights:
+
+1. **Trends Over Time:** By combining data by release year, the project visualized trends in critic vs. audience scores over time. It was found that while both scores show fluctuations, the discrepancy between them varies across different decades.
+2. **Genre and Director Influence:** Preliminary findings suggested that specific genres and directors are associated with more significant gaps between critic and audience scores. For instance, action and horror films often show higher discrepancies.
+3. **Blockbusters vs. Indie Films:** Blockbuster movies tend to have more polarized scores between critics and audiences than indie films, which might reflect differing expectations and production values.
+4. **Implications for Marketing and Production:** Understanding these trends can help filmmakers and marketers target their efforts more effectively, depending on whether they aim to satisfy critics or cater to broader audience tastes.
+
+# Implications for the Consumer.
+The implications of this analysis for the consumer (moviegoers) are significant. By analyzing parts contributing to rating discrepancies, consumers can make more informed choices regarding which movies to watch based on their preferences. For example, if a consumer prefers movies with high audience ratings but lower critic ratings, they might lean toward specific genres or directors highlighted in this analysis.
+
+# Limitations.
+There are several limitations to this analysis:
+
+1. **Lack of Budget and Box Office Data:** The analysis could not explore the impact of budget and box office performance on critic and audience scores due to the absence of this data in the dataset.
+2. **Complexity of Genre Classification:** Movies often fall into multiple genres, making it challenging to separate the effect of a single genre on score discrepancies.
+3. **Static Nature of the Dataset:** The dataset only includes movies until 2020, which might not reflect more recent trends in movie ratings.
+
+# Concluding Remarks.
+This analysis provides an overview of the factors causing variation between critics and audience ratings on Rotten Tomatoes. Future work could include additional data sources, such as budget and box office figures, and explore machine learning models to predict rating discrepancies. The narrative uncovered by this analysis highlights the complexities of movie reception and the potential for targeted strategies in filmmaking and marketing to address these discrepancies. 
+
+ 

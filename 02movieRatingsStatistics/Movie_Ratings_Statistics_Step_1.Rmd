@@ -1,0 +1,46 @@
+---
+title: "Movie_Ratings_Statistics_Step_1"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction.
+As a movie fan, I have, for the last couple of years, decided to watch a movie based on audience reviews (scores) when they are higher than critics. The discrepancy between movie critic reviews and audience reviews has been debated for years. Critics often focus on artistic and technical aspects of films, while audience reviews are influenced by personal satisfaction and expectations. This project aims to analyze the factors contributing to the differences between these two types of reviews.
+
+# Research Questions.
+1. What are the key factors that influence critic scores compared to audience scores? 
+2. How do genre and release year affect the discrepancy between critic and audience scores? 
+3. Are there specific directors or actors whose movies consistently show a larger gap between critic and audience scores? 
+4. How do blockbuster movies compare to indie films regarding critic vs. audience reviews? 
+5. What role do movie budgets and box office performance play in comparing critic and audience scores?
+
+# Approach. 
+Use statistical analysis to determine the factors contributing to the discrepancies between critic and audience scores.
+
+# How Your Approach Addresses the Problem. 
+By analyzing these factors, we can gain a deeper understanding of the reasons behind the differences in reviews and potentially offer insights into how movies can be better received by critics and audiences.
+
+# Data. 
+* Rotten Tomatoes Movies and Critic Reviews Dataset:
+  + https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset
+  + rotten_tomatoes_critic_reviews.csv
+  + rotten_tomatoes_movies.csv
+
+# Required Packages. 
+* tidyverse - data manipulation and visualization. 
+* ggplot2 - plotting. 
+* dplyr - data manipulation. 
+* readr - data import. 
+* lubridate - date handling.
+
+# Plots and Table Needs.
+* Scatter plots. 
+* Box plots. 
+* Bar charts.
+
+# Questions for Future Steps.
+1. How to handle potential biases in review data. 
+2. Modeling techniques to predict discrepancies between critic and audience scores. 

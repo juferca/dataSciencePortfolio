@@ -1,0 +1,168 @@
+---
+title: "Movie_Ratings_Statistics_Step_2"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Set working directory.
+setwd("C:/Users/Juan Caballero/Desktop/dataSciencePortfolio/02movieRatingsStatistics")
+
+# Load libraries needed.
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
+
+## Importing Data.
+Dataset obtained from: https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset (Data has been scraped from the publicly available website https://www.rottentomatoes.com as of 2020-10-31.)
+
+I have two file formats, .csv and .xlsx. Importing .xlsx (slower to read) to main original data types.
+
+```{r}
+# rotten_tomatoes_df <- read.csv("rotten_tomatoes_movies.csv")
+rotten_tomatoes_df <- read_excel("rotten_tomatoes_movies.xlsx")
+
+summary(rotten_tomatoes_df)
+```
+
+## Data Preparation and Cleaning.
+
+``` {r}
+# Check for missing values.
+sum(is.na(rotten_tomatoes_df$tomatometer_rating))
+sum(is.na(rotten_tomatoes_df$audience_rating))
+sum(is.na(rotten_tomatoes_df$original_release_date))
+
+# Drop rows with missing critic or audience ratings.
+cleaned_rotten_tomatoes_data <- rotten_tomatoes_df %>% 
+  drop_na(tomatometer_rating, audience_rating, original_release_date)
+
+# Select relevant columns
+columns_selected <- c('movie_title', 'content_rating', 'genres', 'directors', 'actors',
+                      'original_release_date', 'runtime', 'production_company',
+                      'tomatometer_rating',
+                      'audience_rating')
+cleaned_rotten_tomatoes_data <- cleaned_rotten_tomatoes_data %>% select(all_of(columns_selected))
+
+# Extract year from release date
+cleaned_rotten_tomatoes_data <- cleaned_rotten_tomatoes_data %>%
+  mutate(release_year = as.numeric(format(original_release_date, "%Y")))
+
+# Create score discrepancy variable
+cleaned_rotten_tomatoes_data <- cleaned_rotten_tomatoes_data %>%
+  mutate(score_discrepancy = tomatometer_rating - audience_rating)
+```
+
+## Display Cleaned Dataset.
+
+``` {r}
+# Display structure of cleaned dataset
+glimpse(cleaned_rotten_tomatoes_data)
+
+# Display summary of cleaned dataset
+summary(cleaned_rotten_tomatoes_data)
+
+# Aggregate the data by year to get mean critic and audience scores.
+trend_data <- cleaned_rotten_tomatoes_data %>%
+  group_by(release_year) %>%
+  summarize(mean_critic_score = mean(tomatometer_rating, na.rm = TRUE),
+            mean_audience_score = mean(audience_rating, na.rm = TRUE))
+
+# Plot trends in critic vs. audience scores over time.
+ggplot(trend_data, aes(x = release_year)) +
+  geom_line(aes(y = mean_critic_score, color = "Critic Score"), linewidth = 1) +
+  geom_line(aes(y = mean_audience_score, color = "Audience Score"), linewidth = 1) +
+  labs(title = "Trends in Critic vs. Audience Scores Over Time",
+       x = "Year of Release",
+       y = "Mean Score",
+       color = "Score Type") +
+  scale_color_manual(values = c("Critic Score" = "blue", "Audience Score" = "red")) +
+  theme_minimal()
+
+# Plot trend lines
+ggplot(trend_data, aes(x = release_year)) +
+  geom_smooth(aes(y = mean_critic_score, color = "Critic Score"), method = "loess", se = FALSE) +
+  geom_smooth(aes(y = mean_audience_score, color = "Audience Score"), 
+              method = "loess", se = FALSE) +
+  labs(title = "Trends in Critic vs. Audience Scores Over Time",
+       x = "Year of Release",
+       y = "Mean Score",
+       color = "Score Type") +
+  scale_color_manual(values = c("Critic Score" = "blue", "Audience Score" = "red")) +
+  theme_minimal()
+
+# Plot scatter plots.
+ggplot(trend_data, aes(x = release_year)) +
+  geom_point(aes(y = mean_critic_score, color = "Critic Score"), size = 2) +
+  geom_point(aes(y = mean_audience_score, color = "Audience Score"), size = 2) + 
+  labs(title = "Trends in Critic vs. Audience Scores Over Time", x = "Year of Release", 
+       y = "Mean Score", color = "Score Type") + 
+  scale_color_manual(values = c("Critic Score" = "blue", "Audience Score" = "red")) + theme_minimal()
+
+# Plot scatter plots with trend lines
+ggplot(trend_data, aes(x = release_year)) +
+  geom_point(aes(y = mean_critic_score, color = "Critic Score"), size = 2) +
+  geom_point(aes(y = mean_audience_score, color = "Audience Score"), size = 2) +
+  geom_smooth(aes(y = mean_critic_score, color = "Critic Score"), method = "loess", se = FALSE) +
+  geom_smooth(aes(y = mean_audience_score, color = "Audience Score"), method = "loess", se = FALSE) +
+  labs(title = "Trends in Critic vs. Audience Scores Over Time",
+       x = "Year of Release",
+       y = "Mean Score",
+       color = "Score Type") +
+  scale_color_manual(values = c("Critic Score" = "blue", "Audience Score" = "red")) +
+  theme_minimal()
+
+```
+
+## What information is not self-evident?
+Means of critic and audience scores are grouped by movies' release year.
+
+Rotten Tomatoes website was launched on August 1998.
+
+Critic and audience scores rate movies dating back to 1914.
+
+The specific impact of different genres (a movie can be classified in more that one genre), directors, and actors (more than one) on the score discrepancies.
+
+The influence of budget and box office performance on these scores (No provided in dataset).
+
+## What are different ways you could look at this data?
+Analyzing score discrepancies by genre and release year.
+
+Investigating specific directors or actors with consistent score gaps.
+
+Comparing blockbuster movies to independent films.
+
+## How do you plan to slice and dice the data?
+Group data by genre, director, and release year.
+
+## How could you summarize your data to answer key questions?
+Use summary statistics (mean, median, standard deviation).
+Create pivot tables for aggregating scores by genre, director, etc.
+
+## What types of plots and tables will help you to illustrate the findings to your questions?
+Bar plots for score discrepancies by genre.
+
+Line plots to show trends over time.
+
+Box plots to compare score distributions between blockbusters and indie films.
+
+## Do you plan on incorporating any machine learning techniques to answer your research questions? Explain.
+Right now, I am not sure which machine learning techniques I can use. Week 10 will cover machine learning concepts. 
+
+## Questions for future steps.
+How and where can I get movie budget, and box office performance.
+
+How to filter genre, director, actor, 
+
+How to arrange data by different categories to reveal patterns.
+
+Reduce data to focus on key variables relevant to the research questions.
+
+Create new variables to measure and compare differences.
+
+Summary statistics highlighting trends and differences across categories.
+
+Using pipe operator to streamline data manipulation and transformation steps.
