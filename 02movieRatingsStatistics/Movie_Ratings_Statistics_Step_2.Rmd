@@ -6,8 +6,7 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-# Set working directory.
-setwd("C:/Users/Juan Caballero/Desktop/dataSciencePortfolio/02movieRatingsStatistics")
+# Working directory handled by RStudio Project (.Rproj)
 
 # Load libraries needed.
 library(readxl)
