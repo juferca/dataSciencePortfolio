@@ -98,15 +98,15 @@ Selected variables included:
 
 
 
-* `tomatometer\_rating`
+* `tomatometer_rating`
 
-* `audience\_rating`
+* `audience_rating`
 
-* `content\_rating`
+* `content_rating`
 
 * `runtime`
 
-* `release\_year`
+* `release_year`
 
 
 
