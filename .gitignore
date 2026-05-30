@@ -1,7 +1,4 @@
 .ipynb_checkpoints/
 .Rproj.user
 
-04dataPreparationPipeline/movies_database.db
-04dataPreparationPipeline/.gitignore
-04dataPreparationPipeline/rotten_tomatoes_critic_reviews.csv
-04dataPreparationPipeline/rt_cleaned_critic_reviews_df.csv
+05dataMiningMovieModel/rotten_tomatoes_critic_reviews.csv
