@@ -16,6 +16,10 @@ The project uses data collected from Rotten Tomatoes, including:
 * Critic review information.
 * Audience score data.
 
+### Dataset Source
+
+Rotten Tomatoes Movies and Critic Reviews Dataset: https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset
+
 ## Tools and Technologies
 
 * Python.
