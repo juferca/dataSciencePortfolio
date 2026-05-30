@@ -37,6 +37,16 @@ Dataset Size:
 - 55,524 runners.
 - 17 variables.
 
+### Dataset Sources
+
+Hovde, J. (2024, November). *Data Is Plural reader Joe Hovde has scraped the results of the 2024 marathon into a downloadable spreadsheet. Data Is Plural.*
+
+https://docs.google.com/spreadsheets/d/1O_zxndHKhKMIfJ9e7_M5L7b4F3S__d1nVnUS8iZn8yE/edit?gid=823797431#gid=823797431
+
+Hovde, J. (2024). *2024 Marathon Results [Google Sheets].*
+
+https://docs.google.com/spreadsheets/d/1O_zxndHKhKMIfJ9e7_M5L7b4F3S__d1nVnUS8iZn8yE/edit?gid=0#gid=0
+
 ## Data Preparation
 
 Key preprocessing steps included:
@@ -101,3 +111,20 @@ The analysis found that:
 - Seaborn.
 - Scikit-learn.
 - TensorFlow / Keras.
+
+## Files
+
+| File                                                     | Description                 |
+|----------------------------------------------------------|-----------------------------|
+| Marathon_Performance_Analysis.ipynb                      | Main project notebook       |
+| Marathon_Performance_Prediction.pdf                      | Project report and analysis |
+| NYC Marathon Results, 2024 - Marathon Runner Results.csv | Dataset                     |
+| README.md                                                | Project documentation       |
+
+## Future Improvements
+
+- Incorporate weather and course-condition data.
+- Explore additional ensemble models.
+- Develop runner performance forecasting tools.
+- Create interactive dashboards for marathon analytics.
+- Test advanced deep learning approaches.
