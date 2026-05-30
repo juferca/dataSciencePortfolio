@@ -37,13 +37,14 @@ The project uses data collected from Rotten Tomatoes, including:
 
 ## Files
 
-File                                                    Description
-Movie_Audience_Score_Prediction.ipynb                   Main project notebook
-Movie_Audience_Score_Prediction.pdf                     PDF version of the notebook
-Predicting Audience Scores From Movie Attributes.docx   Project report             
-cleaned_movie_data.csv                                  Cleaned movie dataset      
-rotten_tomatoes_critic_reviews.csv                      Critic review dataset      
-rotten_tomatoes_movies.xlsx                             Movie information dataset  
+| File                                                  | Description                 |
+| ----------------------------------------------------- | --------------------------- |
+| Movie_Audience_Score_Prediction.ipynb                 | Main project notebook       |
+| Movie_Audience_Score_Prediction.pdf                   | PDF version of the notebook |
+| Predicting Audience Scores From Movie Attributes.docx | Project report              |
+| cleaned_movie_data.csv                                | Cleaned movie dataset       |
+| rotten_tomatoes_critic_reviews.csv                    | Critic review dataset       |
+| rotten_tomatoes_movies.xlsx                           | Movie information dataset   |
 
 ## Results
 
