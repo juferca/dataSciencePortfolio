@@ -12,28 +12,28 @@ Movie studios and streaming platforms invest significant resources into film pro
 
 The project uses data collected from Rotten Tomatoes, including:
 
-* Movie attributes
-* Critic review information
-* Audience score data
+* Movie attributes.
+* Critic review information.
+* Audience score data.
 
 ## Tools and Technologies
 
-* Python
-* Jupyter Notebook
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
-* Seaborn
+* Python.
+* Jupyter Notebook.
+* Pandas.
+* NumPy.
+* Scikit-learn.
+* Matplotlib.
+* Seaborn.
 
 ## Project Workflow
 
-1. Data acquisition and collection
-2. Data cleaning and preprocessing
-3. Exploratory data analysis (EDA)
-4. Feature engineering
-5. Machine learning model development
-6. Model evaluation and interpretation
+1. Data acquisition and collection.
+2. Data cleaning and preprocessing.
+3. Exploratory data analysis (EDA).
+4. Feature engineering.
+5. Machine learning model development.
+6. Model evaluation and interpretation.
 
 ## Files
 
