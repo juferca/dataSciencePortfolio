@@ -1,0 +1,11 @@
+.ipynb_checkpoints/
+
+04dataPreparationPipeline/movies_database.db
+04dataPreparationPipeline/.gitignore
+
+04dataPreparationPipeline/.gitignore
+04dataPreparationPipeline/movies_database.db
+
+*.db
+*.docx
+README_OLD.md
